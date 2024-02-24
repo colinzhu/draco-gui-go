@@ -1,0 +1,15 @@
+Please create a GUI application in golang which is for users to convert .STL files to .DRC format. Here are the details of the requirement:
+1. GUI design:
+    1.1. it allows user to select a folder which contains .STL files
+    1.2. it has a input field for user to set parameter value, the default value is: '-qp 18 -cl 10'
+    1.3. it has a button ('Convert') for users to start the convertsion
+    1.4. initial gui window size is 700 x 500 pixel
+2. Once the button is click, the program will start the convertsion
+    2.1 it invokes a command line application to do the convertion,the command line application will be place in the same folder of the gui application.
+    2.2 here is the example linux command to convert one .STL file: "./draco_encoder -i /folder/test.STL -o /folder/drc/test.src -qp 18 -cl 10"
+    2.3 '-qp 18 -cl 10' will be replaced with value from gui parameter field
+    2.4 for windows system, the command line application will be draco_encoder.exe
+    2.5 the generated drc file will be placed in the sub-folder "drc" inside of user selected folder. 
+    2.6 it needs to auto create the sub-folder "drc" folder in the user selected folder first, and then convert all the STL files
+    2.7 when convertion is completed, show a message, so the user knows it's completed
+3. The GUI application can be run in both linux and windows system
