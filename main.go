@@ -83,7 +83,7 @@ func convert(folder string, params string, w fyne.Window, outputLabel *widget.La
 			output := filepath.Join(drcPath, baseName+".drc")
 			cmdName := "./draco_encoder"
 			if runtime.GOOS == "windows" {
-				cmdName = "draco_encoder.exe"
+				cmdName = "./draco_encoder.exe"
 			}
 
 			cmd := exec.Command(cmdName, "-qp", params, "-i", path, "-o", output)
